@@ -1,0 +1,23 @@
+.main-useradd-div {
+    border: 1px solid rgb(32, 26, 26);
+    padding: 50px;
+    border-radius: 10px;
+    margin-left:25%;
+
+}
+.main-useradd-div input {
+    width: 100%;
+    display: block;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    margin-bottom: 15px;
+    /* font-weight: bold; */
+
+}
+
+.main-useradd-div label{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}

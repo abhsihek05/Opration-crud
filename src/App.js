@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Nav } from 'react-bootstrap';
+import { BrowserRouter,Switch,Route } from 'react-router-dom';
+import Contact from './Components/Contact';
+import Feachers from './Components/Feachers';
+import Home from './Components/Home';
+import NavBar from './Components/NavBar';
+import Pricing from './Components/Pricing';
+import User from './User/User';
+import UserAdd from './User/UserAdd';
+import UserEdit from './User/UserEdit';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {sonu:"hellow solis lsjdljjasljjhflhas olashljfalfs lskahfdsaljjfdljkfsajl l h"}
+
+  }
+
+  render(){
+    return(
+      <>
+   
+        <BrowserRouter>
+        <NavBar />
+        <Pricing nnnn={this.state.sonu} />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/feachers" component={Feachers} />
+            {/* <Route exact path="/pricing" component={Pricing} /> */}
+            <Route exact path="/useradd" component={UserAdd} />
+            <Route exact path="/useredit/:id" component={UserEdit} />
+          </Switch>
+        </BrowserRouter>
+      </>
+    )
+  }
+
 }
+
 
 export default App;
