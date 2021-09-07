@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 class User extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { users: [] }
+        this.state = { users: [],Myname:"abhishek kumar" }
 
     }
 
