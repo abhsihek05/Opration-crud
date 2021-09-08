@@ -36,13 +36,13 @@ class User extends React.Component {
                <div className="d-flex justify-content-end m-2">
                <Link to="/useradd" className="btn btn-primary">Add New</Link>
                </div>
-                <table class="table " >
+                <table className="table " >
                     <thead>
                         <tr className="bg-dark text-light">
                             <th scope="col">Id</th>
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Phone</th>
+                            <th scope="col">website</th>
                             <th scope="col">Buttons</th>
                         </tr>
                     </thead>
@@ -50,15 +50,15 @@ class User extends React.Component {
 
                                               {
                             this.state.users.map((x, i)=>
-                             <tr>
+                             <tr key={i}>
                                 <td>{i+1}</td>
                                 <td>{x.name}</td>
-                                <td>{x.email}</td>
-                                <td>{x.phone}</td>
+                                <td>{x.username}</td>
+                                <td>{x.website}</td>
                                 <td>
-                                    <Link to={`/read/:${x.id}`} className="btn btn-primary border-light m-1">read</Link>
-                                    <Link to={`/useredit/:${x.id}`} className="btn btn-primary border-light m-1">edit</Link>
-                                    <button  onClick={()=>this.deleteItem(x.id)} className="btn btn-primary border-light m-1">delete</button>
+                                    <Link to={`/read/${x.id}`} className="btn btn-primary border-light m-1">Read</Link>
+                                    <Link to={`/useredit/${x.id}`} className="btn btn-primary border-light m-1">Edit</Link>
+                                    <button  onClick={()=>this.deleteItem(x.id)} className="btn btn-primary border-light m-1">Delete</button>
                                 </td>
                                 
                             </tr>)

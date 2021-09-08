@@ -21,26 +21,32 @@ class UserAdd extends React.Component {
       body: JSON.stringify(data) // body data type must match "Content-Type" header
     });
     return response.json(); // parses JSON response into native JavaScript objects
+  
+   
   }
 
 
-
-
-
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
     let obj = this.state.fields;
-    this.postData('http://localhost:3002/users',obj)
+    await this.postData('http://localhost:3002/users', obj)
       .then(data => {
         console.log(data);
       });
+      this.redirect();
   }
 
+  redirect(){
+    this.props.history.push("");
+  }
   handleChange = (event) => {
     let obj = this.state.fields;
     obj[event.target.name] = event.target.value;
     this.setState({ fields: obj });
   }
+
+
+
 
   render() {
     return (
