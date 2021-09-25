@@ -28,6 +28,7 @@ class UserAdd extends React.Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
+    
     let obj = this.state.fields;
     await this.postData('http://localhost:3002/users', obj)
       .then(data => {

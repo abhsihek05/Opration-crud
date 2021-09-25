@@ -2,6 +2,11 @@ import React from 'react';
 import UserEdit from './UserEdit';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import { MdDelete } from "react-icons/md";
+import { MdModeEdit } from "react-icons/md";
+import { MdMarkunread } from "react-icons/md";
+
+
 
 class User extends React.Component {
     constructor(props) {
@@ -33,7 +38,8 @@ class User extends React.Component {
     render() {
         return (
             <>
-               <div className="d-flex justify-content-end m-2">
+              <div className="container">
+              <div className=" d-flex justify-content-end m-2">
                <Link to="/useradd" className="btn btn-primary">Add New</Link>
                </div>
                 <table className="table " >
@@ -56,15 +62,16 @@ class User extends React.Component {
                                 <td>{x.username}</td>
                                 <td>{x.website}</td>
                                 <td>
-                                    <Link to={`/read/${x.id}`} className="btn btn-primary border-light m-1">Read</Link>
-                                    <Link to={`/useredit/${x.id}`} className="btn btn-primary border-light m-1">Edit</Link>
-                                    <button  onClick={()=>this.deleteItem(x.id)} className="btn btn-primary border-light m-1">Delete</button>
+                                    <Link to={`/read/${x.id}`} className="btn btn-primary border-light m-1"><MdMarkunread /></Link>
+                                    <Link to={`/useredit/${x.id}`} className="btn btn-primary border-light m-1"> <MdModeEdit /></Link>
+                                    <button  onClick={()=>this.deleteItem(x.id)} className="btn btn-primary border-light m-1"><MdDelete /></button>
                                 </td>
                                 
                             </tr>)
                         }
                     </tbody>
                 </table>
+              </div>
             </>
         )
     }

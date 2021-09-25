@@ -20,13 +20,10 @@ class UserEdit extends React.Component {
   async postData(url = '', data = {}) {
     const response = await fetch(url, {
       method: 'put', // *GET, POST, PUT, DELETE, etc.
-      headers: {
-        'Content-Type': 'application/json'
-        // 'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: JSON.stringify(data) // body data type must match "Content-Type" header
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(data) 
     });
-    return response.json(); // parses JSON response into native JavaScript objects
+    return response.json();
   }
 
 
