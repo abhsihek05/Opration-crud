@@ -5,7 +5,7 @@ import '../AllCss/UserAdd.css';
 class UserAdd extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { fields: { name: "", username: "", website: "", phone: "" } };
+    this.state = { fields: { name: "",lname: "",  email: "", add: "", phone: "" } };
 
 
   }
@@ -13,16 +13,14 @@ class UserAdd extends React.Component {
 
   async postData(url = '', data = {}) {
     const response = await fetch(url, {
-      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      method: 'POST', 
       headers: {
         'Content-Type': 'application/json'
-        // 'Content-Type': 'application/x-www-form-urlencoded',
+        
       },
-      body: JSON.stringify(data) // body data type must match "Content-Type" header
+      body: JSON.stringify(data) 
     });
-    return response.json(); // parses JSON response into native JavaScript objects
-  
-   
+    return response.json();    
   }
 
 
@@ -32,7 +30,7 @@ class UserAdd extends React.Component {
     let obj = this.state.fields;
     await this.postData('http://localhost:3002/users', obj)
       .then(data => {
-        console.log(data);
+        // console.log(data);
       });
       this.redirect();
   }
@@ -40,6 +38,7 @@ class UserAdd extends React.Component {
   redirect(){
     this.props.history.push("");
   }
+  
   handleChange = (event) => {
     let obj = this.state.fields;
     obj[event.target.name] = event.target.value;
@@ -57,10 +56,14 @@ class UserAdd extends React.Component {
           <form onSubmit={(e) => this.handleSubmit(e)}>
             <label >Name</label>
             <input name="name" tupe="text" placeholder="Enter your name" value={this.state.fields.name} onChange={this.handleChange} />
+            <label >Last Name</label>
+            <input name="lname" tupe="text" placeholder="Enter your Last name" value={this.state.fields.lname} onChange={this.handleChange} />
             <label >User Name</label>
             <input name="username" tupe="text" placeholder="User name" value={this.state.fields.username} onChange={this.handleChange} />
-            <label >website</label>
-            <input name="website" tupe="text" placeholder="website" value={this.state.fields.website} onChange={this.handleChange} />
+            <label >Address</label>
+            <input name="add" tupe="text" placeholder="address" value={this.state.fields.add} onChange={this.handleChange} />
+            <label >Email</label>
+            <input name="email" tupe="text" placeholder="Email" value={this.state.fields.email} onChange={this.handleChange} />
             <label >phone</label>
             <input name="phone" tupe="text" placeholder="Phone" value={this.state.fields.phone} onChange={this.handleChange} />
             <div className="text-center pt-3">
@@ -73,5 +76,4 @@ class UserAdd extends React.Component {
     )
   }
 }
-
 export default UserAdd;

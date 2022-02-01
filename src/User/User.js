@@ -1,5 +1,4 @@
 import React from 'react';
-import UserEdit from './UserEdit';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 import { MdDelete } from "react-icons/md";
@@ -9,31 +8,32 @@ import { MdMarkunread } from "react-icons/md";
 
 
 class User extends React.Component {
+    
     constructor(props) {
         super(props);
         this.state = { users: [],Myname:"abhishek kumar" }
 
     }
 
+
     componentDidMount() {
         this.loadUsers();
+        fetch("http://localhost:3002/users")
+        .then(response => response.json())
+        .then(data =>  console.log(data));
     }
+
     loadUsers = async () => {
         const result = await axios.get("http://localhost:3002/users");
         const userData = result.data;
         this.setState({ users: userData });
     }
 
-     deleteItem = async id => {
+     deleteItem = async (id) => {
          await axios.delete(`http://localhost:3002/users/${id}`);
         this.loadUsers()
-        // var x = this.state.users;
-        // x.splice(i, 1);
-        // console.log(i);
-        // this.setState({users:x});
+
     }
-
-
 
     render() {
         return (
@@ -42,25 +42,30 @@ class User extends React.Component {
               <div className=" d-flex justify-content-end m-2">
                <Link to="/useradd" className="btn btn-primary">Add New</Link>
                </div>
-                <table className="table " >
+                <table className="table text-center  " >
                     <thead>
                         <tr className="bg-dark text-light">
-                            <th scope="col">Id</th>
-                            <th scope="col">Name</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
                             <th scope="col">Email</th>
-                            <th scope="col">website</th>
-                            <th scope="col">Buttons</th>
+                            <th scope="col">Phone Number</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Add (city)</th>
+                            <th scope="col">Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='fs-6'>
 
-                                              {
+                    {
                             this.state.users.map((x, i)=>
                              <tr key={i}>
-                                <td>{i+1}</td>
                                 <td>{x.name}</td>
-                                <td>{x.username}</td>
-                                <td>{x.website}</td>
+                                <td>{x.lname}</td>
+                                <td>{x.email}</td>
+                                <td>{x.phone}</td>
+                                <td>{x.gender}</td>
+                                <td>{x.add}</td>
+
                                 <td>
                                     <Link to={`/read/${x.id}`} className="btn btn-primary border-light m-1"><MdMarkunread /></Link>
                                     <Link to={`/useredit/${x.id}`} className="btn btn-primary border-light m-1"> <MdModeEdit /></Link>
@@ -78,3 +83,5 @@ class User extends React.Component {
 }
 
 export default User;
+
+

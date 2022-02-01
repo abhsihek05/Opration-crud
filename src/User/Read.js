@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React from 'react';
 import '../AllCss/UserAdd.css';
 import {Link} from "react-router-dom";
@@ -13,10 +13,8 @@ class Read extends React.Component {
             SingleData: {},
         }
 
-
     }
     componentDidMount() {
-        // console.log(this.state.champId);
         this.loadusers();
     }
 
@@ -24,12 +22,10 @@ class Read extends React.Component {
          fetch(`http://localhost:3002/users/${this.state.champId}`)
         .then(Response => Response.json())
         .then(data => this.setState({SingleData:data}));
-        
-        // const result = await axios.get(`http://localhost:3002/users/${this.state.champId}`);
-        // console.log(result.data);
-        // this.setState({SingleData:result.data});
     }
-    render() {
+
+
+        render() {
         return (
             <>
                 <h2 className="text-center p-3">this is the Read page is here</h2>
@@ -41,10 +37,10 @@ class Read extends React.Component {
                     <form >
 
                         <h5> # {this.state.SingleData.id}</h5>
-                        <input name="name" tupe="text"  value={this.state.SingleData.name} placeholder="Enter your name" />
-                        <input name="email" tupe="text" value={this.state.SingleData.username} placeholder="User name" />
-                        <input name="phone" tupe="text" value={this.state.SingleData.phone} placeholder="Password" />
-                        <input name="website" tupe="text" value={this.state.SingleData.website} placeholder="Phone" />
+                        <input name="name" tupe="text"  value={this.state.SingleData.name} your  />
+                        <input name="email" tupe="text" value={this.state.SingleData.username}  />
+                        <input name="phone" tupe="text" value={this.state.SingleData.phone} />
+                        <input name="website" tupe="text" value={this.state.SingleData.website}  />
                         <div className="text-center pt-3">
                         </div>
                     </form>

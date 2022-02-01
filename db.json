@@ -2,20 +2,14 @@
   "users": [
     {
       "id": 1,
-      "name": "Raju Singh",
+      "gender": "Male",
+      "add": "new delhi-11001",
+      "lname": "singh",
+      "name": "Leanne Graham",
       "username": "Bret",
       "email": "Sincere@april.biz",
-      "address": {
-        "street": "Kulas Light",
-        "suite": "Apt. 556",
-        "city": "Gwenborough",
-        "zipcode": "92998-3874",
-        "geo": {
-          "lat": "-37.3159",
-          "lng": "81.1496"
-        }
-      },
-      "phone": "1-770-736-8031 x56442",
+      "address": "fasd",
+      "phone": "567890-67890",
       "website": "hildegard.org",
       "company": {
         "name": "Romaguera-Crona",
@@ -25,6 +19,9 @@
     },
     {
       "id": 2,
+      "gender": "Male",
+      "add": "new delhi-11001",
+      "lname": "akey singh",
       "name": "Ervin Howell",
       "username": "Antonette",
       "email": "Shanna@melissa.tv",
@@ -48,6 +45,9 @@
     },
     {
       "id": 3,
+      "gender": "Male",
+      "add": "new delhi-11001",
+      "lname": "akey singh",
       "name": "Clementine Bauch",
       "username": "Samantha",
       "email": "Nathan@yesenia.net",
@@ -71,6 +71,9 @@
     },
     {
       "id": 4,
+      "gender": "Male",
+      "add": "new delhi-11001",
+      "lname": "akey singh",
       "name": "Patricia Lebsack",
       "username": "Karianne",
       "email": "Julianne.OConner@kory.org",
@@ -94,6 +97,9 @@
     },
     {
       "id": 5,
+      "gender": "Male",
+      "add": "new delhi-11001",
+      "lname": "akey singh",
       "name": "Chelsey Dietrich",
       "username": "Kamren",
       "email": "Lucio_Hettinger@annie.ca",
@@ -117,6 +123,9 @@
     },
     {
       "id": 6,
+      "gender": "Male",
+      "add": "new delhi-11001",
+      "lname": "akey singh",
       "name": "Mrs. Dennis Schulist",
       "username": "Leopoldo_Corkery",
       "email": "Karley_Dach@jasper.info",
@@ -140,6 +149,9 @@
     },
     {
       "id": 7,
+      "gender": "Male",
+      "add": "new delhi-11001",
+      "lname": "akey singh",
       "name": "Kurtis Weissnat",
       "username": "Elwyn.Skiles",
       "email": "Telly.Hoeger@billy.biz",
@@ -163,6 +175,9 @@
     },
     {
       "id": 8,
+      "gender": "Male",
+      "add": "new delhi-11001",
+      "lname": "akey singh",
       "name": "Nicholas Runolfsdottir V",
       "username": "Maxime_Nienow",
       "email": "Sherwood@rosamond.me",
@@ -186,6 +201,9 @@
     },
     {
       "id": 9,
+      "gender": "Male",
+      "add": "new delhi-11001",
+      "lname": "akey singh",
       "name": "Glenna Reichert",
       "username": "Delphine",
       "email": "Chaim_McDermott@dana.io",
@@ -208,60 +226,39 @@
       }
     },
     {
-      "name": "sonu verma ",
-      "username": "sunu324@gmail.com",
-      "website": "marrrypoint.com",
-      "phone": "964384351 44444",
-      "id": 10
-    },
-    {
-      "name": "RS dilliwala",
-      "username": "abhishek1234567890",
-      "website": "financeinsharemarket.com",
-      "phone": "456789",
-      "id": 11
-    },
-    {
-      "name": "Raghuveer nath",
-      "username": "abhishek.com .lkjhgfd",
-      "website": "Amazone",
-      "phone": "964384351",
-      "id": 12
-    },
-    {
-      "name": "ravi",
-      "username": "Abhisheksingh8742",
-      "website": "silverpips.com",
-      "phone": "964384351",
-      "id": 13
-    },
-    {
-      "name": "ravi",
-      "username": "Abhisheksingh8742",
-      "website": "silverpips.com",
-      "phone": "964384351",
-      "id": 14
-    },
-    {
-      "name": "Raghuveer nath",
-      "username": "sunu324@gmail.com",
-      "website": "lfsdakjlk lksjkfasfkasjkl this sslkks",
-      "phone": "964384351",
-      "id": 16
+      "id": 10,
+      "gender": "Male",
+      "add": "new delhi-11001",
+      "lname": "akey singh",
+      "name": "Clementina DuBuque",
+      "username": "Moriah.Stanton",
+      "email": "Rey.Padberg@karina.biz",
+      "address": {
+        "street": "Kattie Turnpike",
+        "suite": "Suite 198",
+        "city": "Lebsackbury",
+        "zipcode": "31428-2261",
+        "geo": {
+          "lat": "-38.2386",
+          "lng": "57.2232"
+        }
+      },
+      "phone": "024-648-3804",
+      "website": "ambrose.net",
+      "company": {
+        "name": "Hoeger LLC",
+        "catchPhrase": "Centralized empowering task-force",
+        "bs": "target end-to-end models"
+      }
     },
     {
       "name": "arjun kumar",
-      "username": "Abhisheksingh8742",
-      "website": "lfsdakjlkfjlksfaa",
-      "phone": "+91 96438 54351",
-      "id": 17
-    },
-    {
-      "name": "Abhinav Sharma",
-      "username": "abhinav900098@gmail.com",
-      "website": "firmtech.com",
-      "phone": "8899770066",
-      "id": 18
+      "lname": "Bret bhagat s",
+      "email": "",
+      "add": "new delhi-11001",
+      "phone": "567890-67890",
+      "username": "akey@499gmai.com",
+      "id": 11
     }
   ]
 }
