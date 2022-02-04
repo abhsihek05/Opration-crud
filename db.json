@@ -252,13 +252,20 @@
       }
     },
     {
-      "name": "arjun kumar",
+      "name": "akey kumar",
       "lname": "Bret bhagat s",
       "email": "",
       "add": "new delhi-11001",
       "phone": "567890-67890",
       "username": "akey@499gmai.com",
       "id": 11
+    },
+    {
+      "name": "arjun kumar",
+      "email": "sfda",
+      "phone": "",
+      "pass": "fas",
+      "id": 12
     }
   ]
 }

@@ -5,7 +5,7 @@ import '../AllCss/UserAdd.css';
 class UserAdd extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { fields: { name: "",lname: "",  email: "", add: "", phone: "" } };
+    this.state = { fields: { name:"",lname: "",  email: "", add: "", phone: "" } };
 
 
   }
@@ -16,7 +16,6 @@ class UserAdd extends React.Component {
       method: 'POST', 
       headers: {
         'Content-Type': 'application/json'
-        
       },
       body: JSON.stringify(data) 
     });

@@ -30,7 +30,6 @@ class UserEdit extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     let obj = this.state.SingleData;
-
     this.postData(`http://localhost:3002/users/${this.state.champId}`, obj)
       .then(data => {
         console.log(data);
